@@ -2870,17 +2870,40 @@
 	};
 };
 
+// &ecspi3 {
+// 	/* Touch */
+// 	ads7846@0 {
+// 		reg = <0>;	/* CS0 */
+// 		compatible = "ti,ads2046";
+// 		interrupt-parent = <&gpio4>;
+// 		interrupts = <25 0>;
+// 		spi-max-frequency = <1500000>;
+// 		pendown-gpio = <&gpio4 25 0>;
+// 	 	touchscreen-size-x = <800>;
+// 	 	touchscreen-size-y = <600>;
+// 		ti,x-plate-ohms = /bits/ 16 <180>;
+// 		ti,pressure-max = /bits/ 16 <255>;
+// 		ti,debounce-max = /bits/ 16 <10>;
+// 		ti,debounce-tol = /bits/ 16 <3>;
+// 		ti,debounce-rep = /bits/ 16 <1>;
+// 		ti,settle-delay-usec = /bits/ 16 <150>;
+// 		ti,keep-vref-on;
+// 	};
+// };
+
 &ecspi3 {
 	/* Touch */
 	ads7846@0 {
 		reg = <0>;	/* CS0 */
-		compatible = "ti,ads2046";
+		compatible = "ti,ads7846";
 		interrupt-parent = <&gpio4>;
 		interrupts = <25 0>;
 		spi-max-frequency = <1500000>;
 		pendown-gpio = <&gpio4 25 0>;
-	 	touchscreen-size-x = <800>;
-	 	touchscreen-size-y = <600>;
+		ti,x-min = /bits/ 16 <125>;
+		ti,x-max = /bits/ 16 <4008>;
+		ti,y-min = /bits/ 16 <282>;
+		ti,y-max = /bits/ 16 <3864>;
 		ti,x-plate-ohms = /bits/ 16 <180>;
 		ti,pressure-max = /bits/ 16 <255>;
 		ti,debounce-max = /bits/ 16 <10>;
@@ -2891,46 +2914,46 @@
 	};
 };
 
-&i2c3 {
-	touch: ft5x06_ts@38 {
-		compatible = "edt,edt-ft5x06";
-		reg = <0x38>;
-        interrupt-parent = <&gpio5>;
-        interrupts = <12 IRQ_TYPE_EDGE_FALLING>;
-		touchscreen-size-x = <1024>;
-		touchscreen-size-y = <600>;
-	}; 
+// &i2c3 {
+// 	touch: ft5x06_ts@38 {
+// 		compatible = "edt,edt-ft5x06";
+// 		reg = <0x38>;
+//         interrupt-parent = <&gpio5>;
+//         interrupts = <12 IRQ_TYPE_EDGE_FALLING>;
+// 		touchscreen-size-x = <1024>;
+// 		touchscreen-size-y = <600>;
+// 	}; 
     
-    /*touch: egalax_ts@2A {
-		compatible = "eeti,exc3000";
-		reg = <0x2a>;
-        interrupt-parent = <&gpio5>;
-		interrupts = <12 IRQ_TYPE_LEVEL_LOW>;
-		touchscreen-size-x = <4096>;
-		touchscreen-size-y = <4096>;
-		//touchscreen-inverted-x;
-		//touchscreen-swapped-x-y;	
-    }; */   
+//     /*touch: egalax_ts@2A {
+// 		compatible = "eeti,exc3000";
+// 		reg = <0x2a>;
+//         interrupt-parent = <&gpio5>;
+// 		interrupts = <12 IRQ_TYPE_LEVEL_LOW>;
+// 		touchscreen-size-x = <4096>;
+// 		touchscreen-size-y = <4096>;
+// 		//touchscreen-inverted-x;
+// 		//touchscreen-swapped-x-y;	
+//     }; */   
 
-	// touch: ads7846@0 {
-	// 	reg = <0>;	/* CS0 */
-	// 	compatible = "ti,tsc2046";
-	// 	interrupt-parent = <&gpio4>;
-	// 	interrupts = <25 0>;
-	// 	spi-max-frequency = <1500000>;
-	// 	pendown-gpio = <&gpio4 25 0>;
-	// 	touchscreen-size-x = <800>;
-	// 	touchscreen-size-y = <600>;
-	// 	ti,x-plate-ohms = /bits/ 16 <550>;
-	// 	ti,y-plate-ohms = /bits/ 16 <350>;
-	// 	ti,pressure-max = /bits/ 16 <255>;
-	// 	ti,debounce-max = /bits/ 16 <10>;
-	// 	ti,debounce-tol = /bits/ 16 <3>;
-	// 	ti,debounce-rep = /bits/ 16 <1>;
-	// 	ti,settle-delay-usec = /bits/ 16 <150>;
-	// 	ti,keep-vref-on;
-	// };
-};
+// 	// touch: ads7846@0 {
+// 	// 	reg = <0>;	/* CS0 */
+// 	// 	compatible = "ti,tsc2046";
+// 	// 	interrupt-parent = <&gpio4>;
+// 	// 	interrupts = <25 0>;
+// 	// 	spi-max-frequency = <1500000>;
+// 	// 	pendown-gpio = <&gpio4 25 0>;
+// 	// 	touchscreen-size-x = <800>;
+// 	// 	touchscreen-size-y = <600>;
+// 	// 	ti,x-plate-ohms = /bits/ 16 <550>;
+// 	// 	ti,y-plate-ohms = /bits/ 16 <350>;
+// 	// 	ti,pressure-max = /bits/ 16 <255>;
+// 	// 	ti,debounce-max = /bits/ 16 <10>;
+// 	// 	ti,debounce-tol = /bits/ 16 <3>;
+// 	// 	ti,debounce-rep = /bits/ 16 <1>;
+// 	// 	ti,settle-delay-usec = /bits/ 16 <150>;
+// 	// 	ti,keep-vref-on;
+// 	// };
+// };
 
 &ldb {
 	status = "okay";
