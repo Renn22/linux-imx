@@ -2874,7 +2874,7 @@
 	/* Touch */
 	ads7846@0 {
 		reg = <0>;	/* CS0 */
-		compatible = "ti,ads2046";
+		compatible = "ti,ads7846";
 		interrupt-parent = <&gpio4>;
 		interrupts = <25 0>;
 		spi-max-frequency = <1500000>;
@@ -2913,6 +2913,8 @@
 // 		ti,debounce-rep = /bits/ 16 <1>;
 // 		ti,settle-delay-usec = /bits/ 16 <150>;
 // 		ti,keep-vref-on;
+// 		touchscreen-inverted-y = <1>;
+// 		touchscreen-inverted-x = <1>;
 // 	};
 // };
 
