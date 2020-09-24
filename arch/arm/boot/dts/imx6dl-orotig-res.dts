@@ -3001,6 +3001,7 @@
 		// 		vsync-len = <5>;
 		// 	};
 		// };
+		
 
 		crtc = "ipu1-di1";
 		fsl,data-mapping = "spwg";
@@ -3009,8 +3010,8 @@
 		primary;
 
 		display-timings {
-			native-mode = <&timing0>;
-			timing0: hsd100pxn1 {
+			native-mode = <&timing1>;
+			timing1: hsd100pxn1 {
 				clock-frequency = <40000000>;
 				hactive = <800>;
 				vactive = <600>;
