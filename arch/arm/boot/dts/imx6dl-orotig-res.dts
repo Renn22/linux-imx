@@ -2872,7 +2872,7 @@
 
 &ecspi3 {
 	/* Touch */
-	tsc2046@0 {
+	ads7846@0 {
 		reg = <0>;	/* CS0 */
 		compatible = "ti,tsc2046";
 		interrupt-parent = <&gpio4>;
