@@ -2872,13 +2872,20 @@
 };
 
 &i2c3 {
-	touch: ft5x06_ts@38 {
-		compatible = "edt,edt-ft5x06";
-		reg = <0x38>;
-        	interrupt-parent = <&gpio5>;
-        	interrupts = <12 IRQ_TYPE_EDGE_FALLING>;
-		touchscreen-size-x = <1024>;
-		touchscreen-size-y = <600>;
+	// touch: ft5x06_ts@38 {
+	// 	compatible = "edt,edt-ft5x06";
+	// 	reg = <0x38>;
+    //     	interrupt-parent = <&gpio5>;
+    //     	interrupts = <12 IRQ_TYPE_EDGE_FALLING>;
+	// 	touchscreen-size-x = <1024>;
+	// 	touchscreen-size-y = <600>;
+	// };
+
+	touch: touchscreen@41 {
+		compatible = "ilitek,ili251x";
+		reg = <0x41>;
+		interrupt-parent = <&gpio5>;
+		interrupts = <12 IRQ_TYPE_EDGE_FALLING>;
 	};
     
     /*touch: egalax_ts@2A {
