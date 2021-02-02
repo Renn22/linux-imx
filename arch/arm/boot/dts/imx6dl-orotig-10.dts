@@ -2931,12 +2931,12 @@
 				clock-frequency = <71100000>;
 				hactive = <1280>;
 				vactive = <800>;
-				hback-porch = <50>;
-				hfront-porch = <50>;
+				hback-porch = <80>;
+				hfront-porch = <80>;
 				vback-porch = <23>;
-				vfront-porch = <5>;
-				hsync-len = <60>;
-				vsync-len = <5>;
+				vfront-porch = <0>;
+				hsync-len = <0>;
+				vsync-len = <0>;
 			};
 		};
 	};
