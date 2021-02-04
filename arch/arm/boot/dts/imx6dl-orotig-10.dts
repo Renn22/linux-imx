@@ -2933,8 +2933,8 @@
 		primary;
 
 		display-timings {
-			native-mode = <&timing0>;
-			timing0: hsd100pxn1 {
+			native-mode = <&timing1>;
+			timing1: hsd100pxn1 {
 				clock-frequency = <71100000>;
 				hactive = <1280>;
 				vactive = <800>;
