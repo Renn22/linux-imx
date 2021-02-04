@@ -2872,14 +2872,14 @@
 };
 
 &i2c3 {
-	touch: ft5x06_ts@38 {
-		compatible = "edt,edt-ft5x06";
-		reg = <0x38>;
-		interrupt-parent = <&gpio5>;
-		interrupts = <12 IRQ_TYPE_EDGE_FALLING>;
-		touchscreen-size-x = <1024>;
-		touchscreen-size-y = <600>;
-	};
+	// touch: ft5x06_ts@38 {
+	// 	compatible = "edt,edt-ft5x06";
+	// 	reg = <0x38>;
+	// 	interrupt-parent = <&gpio5>;
+	// 	interrupts = <12 IRQ_TYPE_EDGE_FALLING>;
+	// 	touchscreen-size-x = <1024>;
+	// 	touchscreen-size-y = <600>;
+	// };
 
 	touch: touchscreen@41 {
 		compatible = "ilitek,ili251x";
@@ -2933,17 +2933,17 @@
 		primary;
 
 		display-timings {
-			native-mode = <&timing1>;
-			timing1: hsd100pxn1 {
-				clock-frequency = <51200000>;
-				hactive = <1024>;
-				vactive = <600>;
-				hback-porch = <155>;
-				hfront-porch = <160>;
-				vback-porch = <18>;
-				vfront-porch = <12>;
-				hsync-len = <5>;
-				vsync-len = <5>;
+			native-mode = <&timing0>;
+			timing0: hsd100pxn1 {
+				clock-frequency = <71100000>;
+				hactive = <1280>;
+				vactive = <800>;
+				hback-porch = <100>;
+				hfront-porch = <50>;
+				vback-porch = <10>;
+				vfront-porch = <10>;
+				hsync-len = <10>;
+				vsync-len = <3>;
 			};
 		};
 	};
