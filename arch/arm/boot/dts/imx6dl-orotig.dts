@@ -1421,9 +1421,9 @@
 					remote-endpoint = <&hdmi_mux_0>;
 				};
 
-				ipu1_di0_mipi: mipi-endpoint {
-					remote-endpoint = <&mipi_mux_0>;
-				};
+				// ipu1_di0_mipi: mipi-endpoint {
+				// 	remote-endpoint = <&mipi_mux_0>;
+				// };
 
 				ipu1_di0_lvds0: lvds0-endpoint {
 					remote-endpoint = <&lvds0_mux_0>;
@@ -1446,9 +1446,9 @@
 					remote-endpoint = <&hdmi_mux_1>;
 				};
 
-				ipu1_di1_mipi: mipi-endpoint {
-					remote-endpoint = <&mipi_mux_1>;
-				};
+				// ipu1_di1_mipi: mipi-endpoint {
+				// 	remote-endpoint = <&mipi_mux_1>;
+				// };
 
 				ipu1_di1_lvds0: lvds0-endpoint {
 					remote-endpoint = <&lvds0_mux_1>;
@@ -1702,37 +1702,37 @@
 		#address-cells = <1>;
 		#size-cells = <0>;
 
-		port@0 {
-			reg = <0>;
+		// port@0 {
+		// 	reg = <0>;
 
-			ipu1_csi0_mux_from_mipi_vc0: endpoint {
-				remote-endpoint = <&mipi_vc0_to_ipu1_csi0_mux>;
-			};
-		};
+		// 	ipu1_csi0_mux_from_mipi_vc0: endpoint {
+		// 		remote-endpoint = <&mipi_vc0_to_ipu1_csi0_mux>;
+		// 	};
+		// };
 
-		port@1 {
-			reg = <1>;
+		// port@1 {
+		// 	reg = <1>;
 
-			ipu1_csi0_mux_from_mipi_vc1: endpoint {
-				remote-endpoint = <&mipi_vc1_to_ipu1_csi0_mux>;
-			};
-		};
+		// 	ipu1_csi0_mux_from_mipi_vc1: endpoint {
+		// 		remote-endpoint = <&mipi_vc1_to_ipu1_csi0_mux>;
+		// 	};
+		// };
 
-		port@2 {
-			reg = <2>;
+		// port@2 {
+		// 	reg = <2>;
 
-			ipu1_csi0_mux_from_mipi_vc2: endpoint {
-				remote-endpoint = <&mipi_vc2_to_ipu1_csi0_mux>;
-			};
-		};
+		// 	ipu1_csi0_mux_from_mipi_vc2: endpoint {
+		// 		remote-endpoint = <&mipi_vc2_to_ipu1_csi0_mux>;
+		// 	};
+		// };
 
-		port@3 {
-			reg = <3>;
+		// port@3 {
+		// 	reg = <3>;
 
-			ipu1_csi0_mux_from_mipi_vc3: endpoint {
-				remote-endpoint = <&mipi_vc3_to_ipu1_csi0_mux>;
-			};
-		};
+		// 	ipu1_csi0_mux_from_mipi_vc3: endpoint {
+		// 		remote-endpoint = <&mipi_vc3_to_ipu1_csi0_mux>;
+		// 	};
+		// };
 
 		port@4 {
 			reg = <4>;
@@ -1756,37 +1756,37 @@
 		#address-cells = <1>;
 		#size-cells = <0>;
 
-		port@0 {
-			reg = <0>;
+		// port@0 {
+		// 	reg = <0>;
 
-			ipu1_csi1_mux_from_mipi_vc0: endpoint {
-				remote-endpoint = <&mipi_vc0_to_ipu1_csi1_mux>;
-			};
-		};
+		// 	ipu1_csi1_mux_from_mipi_vc0: endpoint {
+		// 		remote-endpoint = <&mipi_vc0_to_ipu1_csi1_mux>;
+		// 	};
+		// };
 
-		port@1 {
-			reg = <1>;
+		// port@1 {
+		// 	reg = <1>;
 
-			ipu1_csi1_mux_from_mipi_vc1: endpoint {
-				remote-endpoint = <&mipi_vc1_to_ipu1_csi1_mux>;
-			};
-		};
+		// 	ipu1_csi1_mux_from_mipi_vc1: endpoint {
+		// 		remote-endpoint = <&mipi_vc1_to_ipu1_csi1_mux>;
+		// 	};
+		// };
 
-		port@2 {
-			reg = <2>;
+		// port@2 {
+		// 	reg = <2>;
 
-			ipu1_csi1_mux_from_mipi_vc2: endpoint {
-				remote-endpoint = <&mipi_vc2_to_ipu1_csi1_mux>;
-			};
-		};
+		// 	ipu1_csi1_mux_from_mipi_vc2: endpoint {
+		// 		remote-endpoint = <&mipi_vc2_to_ipu1_csi1_mux>;
+		// 	};
+		// };
 
-		port@3 {
-			reg = <3>;
+		// port@3 {
+		// 	reg = <3>;
 
-			ipu1_csi1_mux_from_mipi_vc3: endpoint {
-				remote-endpoint = <&mipi_vc3_to_ipu1_csi1_mux>;
-			};
-		};
+		// 	ipu1_csi1_mux_from_mipi_vc3: endpoint {
+		// 		remote-endpoint = <&mipi_vc3_to_ipu1_csi1_mux>;
+		// 	};
+		// };
 
 		port@4 {
 			reg = <4>;
